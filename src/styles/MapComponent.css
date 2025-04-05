@@ -1,0 +1,379 @@
+.map-component {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.map-wrapper {
+  height: 500px;
+  width: 100%;
+  position: relative;
+  z-index: 1;
+}
+
+.map-container{
+    width: 100%;
+    height: 100%;
+}
+
+/* Route info panel styles */
+.route-info-panel {
+  background-color: #f8f9fa;
+  padding: 16px;
+  border-top: 1px solid #e0e0e0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.route-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.route-title {
+  margin: 0;
+  font-size: 18px;
+  color: #333;
+}
+
+.button-group {
+  display: flex;
+  gap: 8px;
+}
+
+.route-button {
+  padding: 6px 12px;
+  background-color: #e9ecef;
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* Metrics grid */
+.metrics-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 12px;
+}
+
+.metric-card {
+  background-color: white;
+  padding: 12px;
+  border-radius: 6px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.metric-label {
+  color: #6c757d;
+  font-size: 14px;
+}
+
+.metric-value {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+/* Route legend */
+.route-legend {
+  margin-top: 12px;
+  background-color: white;
+  padding: 12px;
+  border-radius: 6px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.legend-color {
+  width: 20px;
+  height: 20px;
+  border-radius: 4px;
+}
+
+.legend-color-route {
+  background-color: #3a7bd5;
+}
+
+.legend-color-rest {
+  background-color: #dc3545;
+}
+
+.legend-label {
+  font-weight: 500;
+}
+
+
+.alert-card {
+  padding: 12px;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 12px;
+}
+
+.alert-card.warning {
+  background-color: #fff3cd;
+  color: #856404;
+  border-left: 4px solid #ffc107;
+}
+
+.alert-card i {
+  font-size: 20px;
+}
+
+/* Enhanced metric cards */
+.metric-card {
+  transition: transform 0.2s;
+}
+
+.metric-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.metric-value {
+  color: #3a7bd5;
+  font-size: 24px;
+}
+
+
+.route-details {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.detail-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.detail-item span:first-child {
+  color: #6c757d;
+}
+
+
+.route-legend {
+  background: white;
+  padding: 15px;
+  border-radius: 5px;
+  box-shadow: 0 1px 5px rgba(0,0,0,0.2);
+  margin-top: 20px;
+}
+
+.legend-title {
+  margin-top: 0;
+  margin-bottom: 15px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.legend-icon {
+  margin-right: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.legend-label {
+  font-size: 14px;
+  color: #555;
+}
+
+.legend-color {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+  border-radius: 3px;
+}
+
+.legend-color-route {
+  background-color: #3a7bd5;
+}
+
+.legend-color-rest {
+  background-color: #ff6b6b;
+}
+
+
+/* Legend Container */
+.legend-container {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  font-family: 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+  margin-top: 20px;
+}
+
+/* Legend Title */
+.legend-title {
+  margin: 0 0 15px 0;
+  font-size: 18px;
+  font-weight: 600;
+  color: #2c3e50;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 8px;
+}
+
+/* Legend Grid Layout */
+.legend-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+/* Legend Items */
+.legend-item {
+  display: flex;
+  align-items: center;
+  min-width: 160px;
+}
+
+/* Icon Container */
+.legend-icon-container {
+  width: 30px;
+  height: 30px;
+  margin-right: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Special case for default marker */
+.default-marker {
+  height: 41px;
+  width: auto;
+}
+
+/* Regular Icons */
+.legend-icon-img {
+  height: 100%;
+  width: auto;
+  object-fit: contain;
+}
+
+/* Route Line Indicator */
+.legend-route-line {
+  width: 30px;
+  height: 8px;
+  margin-right: 12px;
+  background-color: #3a7bd5;
+  border-radius: 4px;
+}
+
+/* Legend Text */
+.legend-text {
+  font-size: 14px;
+  font-weight: 500;
+  color: #34495e;
+}
+
+
+.route-control-container {
+  /* Main container styling */
+  padding: 12px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  font-family: 'Segoe UI', Roboto, sans-serif;
+  margin-top: 10px;
+
+  /* Leaflet routing machine specific selectors */
+  .leaflet-routing-container {
+    background: transparent;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+  }
+
+  .leaflet-routing-alt {
+    max-height: 250px;
+    overflow-y: auto;
+    margin: 8px 0;
+    padding: 0;
+    background: #f8f9fa;
+    border-radius: 4px;
+  }
+
+  .leaflet-routing-alt h2 {
+    font-size: 20px;
+    margin: 8px 12px;
+    color: #2c3e50;
+    font-weight: 600;
+  }
+
+  .leaflet-routing-alt h3 {
+    font-size: 30px;
+    margin: 12px 20px;
+    color: #2c3e50;
+    font-weight: 600;
+  }
+
+  .leaflet-routing-alt table {
+    width: 100%;
+    font-size: 20px;
+
+    border-collapse: collapse;
+  }
+
+  .leaflet-routing-alt table tr:nth-child(odd) {
+    background-color: #f1f3f5;
+  }
+
+  .leaflet-routing-alt table td {
+    padding: 4px 8px;
+  }
+
+  .leaflet-bar {
+    box-shadow: none;
+    border: none;
+  }
+
+  .leaflet-control {
+    margin: 0;
+  }
+
+  /* Hide unnecessary elements */
+  .leaflet-routing-geocoders {
+    display: none;
+  }
+
+  .leaflet-routing-add-waypoint {
+    display: none;
+  }
+
+  /* Custom close button */
+  .leaflet-routing-close {
+    position: absolute;
+    right: 0px;
+    top: -14px;
+    color: #6c757d;
+    font-size: 25px;
+    cursor: pointer;
+    z-index: 1000;
+  }
+}

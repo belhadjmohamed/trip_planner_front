@@ -1,0 +1,357 @@
+.trip-form-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+  padding: 2rem;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+}
+
+.form-card-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 800px;
+}
+
+.form-card {
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  padding: 2.5rem;
+  position: relative;
+}
+
+.form-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid #eee;
+}
+
+.form-header h2 {
+  color: #2c3e50;
+  margin: 0;
+  font-size: 1.8rem;
+  display: flex;
+  align-items: center;
+}
+
+.btn-back {
+  background: transparent;
+  border: 1px solid #ddd;
+  color: #7f8c8d;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.btn-back:hover {
+  background: #f8f9fa;
+  color: #3498db;
+  border-color: #3498db;
+}
+
+.input-method-toggle {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 1.5rem;
+}
+
+.toggle-btn {
+  flex: 1;
+  padding: 0.8rem;
+  border: none;
+  background: #f8f9fa;
+  border-radius: 8px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  font-weight: 500;
+  transition: all 0.3s;
+}
+
+.toggle-btn.active {
+  background: linear-gradient(135deg, #6e8efb, #a777e3);
+  color: white;
+}
+
+.toggle-btn:not(.active):hover {
+  background: #e9ecef;
+}
+
+.alert-error {
+  background: rgba(231, 76, 60, 0.1);
+  color: #e74c3c;
+  padding: 1rem;
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+}
+
+.form-group-container {
+  position: static;
+  margin-bottom: 1.8rem;
+}
+
+.form-group {
+  position: relative;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.8rem;
+  font-weight: 500;
+  color: #34495e;
+  display: flex;
+  align-items: center;
+}
+
+.coordinates-badge {
+  margin-left: 0.5rem;
+  font-size: 0.7rem;
+  background: rgba(46, 204, 113, 0.1);
+  color: #2ecc71;
+  padding: 0.2rem 0.5rem;
+  border-radius: 10px;
+  font-weight: 500;
+}
+
+.input-with-map-btn {
+  position: relative;
+  display: flex;
+}
+
+.form-control {
+  width: 100%;
+  padding: 0.8rem 1rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: all 0.3s;
+}
+
+.form-control:focus {
+  border-color: #3498db;
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.2);
+}
+
+.map-select-btn {
+  position: absolute;
+  right: 0.5rem;
+  top: 50%;
+  transform: translateY(-50%);
+  background: transparent;
+  border: none;
+  color: #6e8efb;
+  cursor: pointer;
+  padding: 0.5rem;
+  border-radius: 4px;
+  transition: all 0.2s;
+}
+
+.map-select-btn:hover {
+  background: rgba(110, 142, 251, 0.1);
+}
+
+.suggestions-dropdown-wrapper {
+  position: relative;
+  z-index: 1000;
+}
+
+.suggestions-dropdown {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  max-height: 200px;
+  overflow-y: auto;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 0 0 8px 8px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.suggestion-item {
+  padding: 0.8rem 1rem;
+  cursor: pointer;
+  transition: all 0.2s;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.suggestion-address {
+  font-weight: 500;
+  margin-bottom: 0.3rem;
+}
+
+.suggestion-coords {
+  font-size: 0.7rem;
+  color: #7f8c8d;
+  font-family: monospace;
+}
+
+.map-input-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  height: calc(100% - 100px);
+}
+
+.map-instructions {
+  background: #f8f9fa;
+  padding: 1rem;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.map-coordinates {
+  margin-top: 1rem;
+  background: white;
+  padding: 0.8rem;
+  border-radius: 8px;
+  border: 1px solid #eee;
+  font-family: monospace;
+}
+
+.map-wrapper {
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  flex-grow: 1;
+  min-height: 300px;
+}
+
+.map-actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: flex-end;
+  padding-top: 1rem;
+}
+
+.btn {
+  padding: 0.8rem 1.5rem;
+  border-radius: 8px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-cancel {
+  background: transparent;
+  border: 1px solid #ddd;
+  color: #7f8c8d;
+}
+
+.btn-cancel:hover {
+  background: #f8f9fa;
+}
+
+.btn-confirm-location {
+  background: linear-gradient(135deg, #6e8efb, #a777e3);
+  color: white;
+  border: none;
+  box-shadow: 0 4px 15px rgba(106, 118, 251, 0.3);
+}
+
+.btn-confirm-location:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.btn-confirm-location:not(:disabled):hover {
+  background: linear-gradient(135deg, #5a7af0, #9665d6);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(106, 118, 251, 0.4);
+}
+
+.form-actions {
+  margin-top: 2.5rem;
+  text-align: center;
+}
+
+.btn-submit {
+  background: linear-gradient(135deg, #6e8efb, #a777e3);
+  color: white;
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  width: 100%;
+  cursor: pointer;
+  transition: all 0.3s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  box-shadow: 0 4px 15px rgba(106, 118, 251, 0.3);
+}
+
+.btn-submit:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(106, 118, 251, 0.4);
+}
+
+.btn-submit.loading {
+  opacity: 0.8;
+}
+
+.btn-submit:disabled {
+  cursor: not-allowed;
+}
+
+.btn-submit .fa-spin {
+  animation: fa-spin 1s infinite linear;
+}
+
+@keyframes fa-spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@media (max-width: 768px) {
+  .trip-form-container {
+    padding: 1rem;
+  }
+  
+  .form-card {
+    padding: 1.5rem;
+  }
+  
+  .form-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+  
+  .btn-back {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .input-method-toggle {
+    flex-direction: column;
+  }
+
+  .map-actions {
+    flex-direction: column;
+  }
+
+  .btn {
+    width: 100%;
+  }
+}
