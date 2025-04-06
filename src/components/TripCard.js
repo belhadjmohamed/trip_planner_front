@@ -55,7 +55,7 @@ const TripCard = ({ trip, index, onEdit, onView, onDelete }) => {
             </div>
             <div>
               <div className="detail-label">From</div>
-              <div className="detail-value">{trip.pickup_location || 'Not specified'}</div>
+              <div className="detail-value">{trip.current_location || 'Not specified'}</div>
             </div>
           </div>
           

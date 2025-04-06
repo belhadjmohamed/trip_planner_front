@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import TripsList from './pages/TripsList';
 import AddEditTrip from './pages/AddEditTrip';
@@ -7,6 +7,10 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './styles/App.css';
 
 function App() {
+  useEffect(() => {
+    document.title = "Trip Planner"; 
+  }, []);
+
   return (
     <Router>
       <div className="app-container">
